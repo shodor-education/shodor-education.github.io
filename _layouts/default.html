@@ -11,44 +11,67 @@
   </head>
   <body>
     <header>
-      <nav id="logo-bar" aria-label="Site navigation">
         <a id="header-logo" href="{{ site.baseurl }}"><img
           src="{{ 'img/header-logo.jpg' | relative_url }}"
           alt="Shodor logo"/></a>
         <!-- <script async
           src="https://cse.google.com/cse.js?cx=9bc190f387578d67a"></script>
         <div id="search-box" class="gcse-search"></div> -->
-      </nav>
-
-      <nav id="site-nav">
-        <ul>
-          {% for nav-link in site.data.nav-links %}
-            <li>
-              <a href="{{ nav-link.url | relative_url }}">{{ nav-link.label }}</a>
-              {% if nav-link.sublinks %}
-                <ul class="sublist">
-                  {% for nav-sublink in nav-link.sublinks %}
-                    <li>
-                      {% assign first-four-chars = nav-sublink.url
-                        | slice: 0, 4 %}
-                      {% if first-four-chars == "http" %}
-                        {% assign url = nav-sublink.url %}
-                      {% else %}
-                        {% assign url = nav-sublink.url | relative_url %}
-                      {% endif %}
-                      <a href="{{ url }}">{{ nav-sublink.label }}</a>
-                    </li>
-                  {% endfor %}
-                </ul>
-              {% endif %}
-            </li>
-          {% endfor %}
-        </ul>
-      </nav>
     </header>
-
-    <h1>
-      TESTING
-    </h1>
+    <nav id="site-nav">
+      <ul>
+        {% for nav-link in site.data.nav-links %}
+          <li>
+            <a href="{{ nav-link.url | relative_url }}">{{ nav-link.label }}</a>
+            {% if nav-link.sublinks %}
+              <ul class="sublist">
+                {% for nav-sublink in nav-link.sublinks %}
+                  <li>
+                    {% assign first-four-chars = nav-sublink.url
+                      | slice: 0, 4 %}
+                    {% if first-four-chars == "http" %}
+                      {% assign url = nav-sublink.url %}
+                    {% else %}
+                      {% assign url = nav-sublink.url | relative_url %}
+                    {% endif %}
+                    <a href="{{ url }}">{{ nav-sublink.label }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <main>
+      <div>
+        {% unless page.hide-h1 %}
+          <h1>{{ page.title }}</h1>
+        {% endunless %}
+        {{ content }}
+      </div>
+    </main>
+    <footer class="bg-img">
+      <div id="btmTxtStrip">
+        <span>
+          <a href="http://www.shodor.org">&copy;
+            1994–{{ "now" | date: "%Y" }} Shodor</a>
+        </span>
+        <span id="privacy-policy">
+          <a href="{{ '/about/privacy/' | relative_url }}">
+           PRIVACY POLICY</a>
+        </span>
+        <span >
+          <a href="{{ '/about/donate/' | relative_url }}">
+            <img id="donate" src="{{ 'img/donate.gif' | relative_url }}" />
+          </a>
+        </span>
+        <span>
+          <a href="https://nsdl.oercommons.org/" target="_blank">
+            <img id="nsdl-logo" src="{{ 'img/nsdl.gif' | relative_url }}" width="120" />
+          </a>
+        </span>
+      </div>
+    </footer>
   </body>
 </html>

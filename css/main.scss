@@ -1,13 +1,19 @@
 ---
 ---
-
 %body-font {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 12pt;
 }
 
+html{
+  background-color: #003c9e;
+}
+
 $img-dir-url: {{ 'img' | relative_url }};
 $page-width: 800px;
 
+@import 'layout/main';
 @import 'layout/body';
+@import 'layout/footer';
 @import 'layout/site-nav';
+@import 'pages/home';

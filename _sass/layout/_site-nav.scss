@@ -1,15 +1,16 @@
 #site-nav {
   margin: 0 auto;
+  margin-bottom: 10px;
   width: $page-width;
 
   &>ul {
     display: flex;
     margin: 0;
     padding: 0;
+    justify-content: space-between;
 
     &>li {
       display: flex;
-      flex: 1;
       list-style-type: none;
       margin-left: 5px;
       position: relative;
@@ -24,7 +25,8 @@
         border-radius: 5px;
         color: white;
         font-weight: bold;
-        padding: 5px 0;
+        margin-top: -4px;
+        padding: 5px;
         text-align: center;
         text-decoration: none;
         width: 100%;
@@ -39,8 +41,9 @@
         display: none;
         padding: 0;
         position: absolute;
-        top: 30px;
+        top: 25px;
         width: 100%;
+        z-index: 1;
 
         &:hover {
           display: block;

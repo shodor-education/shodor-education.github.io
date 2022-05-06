@@ -1,0 +1,44 @@
+footer{
+  @extend %body-font;
+  background-image: url('#{$img-dir-url}/footer-background.gif');
+  color: white;
+  // min-width: $page-width;
+  height: 109px;
+  position: relative;
+  //width: 798px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &>div{
+    align-items: center;
+    display: flex;
+    height: 35px;
+    margin: 0 auto;
+    width: 798px;
+
+    &>span{
+      text-align: center;
+      flex: 1;
+
+      a:link,
+      a:visited {
+        color: white;
+        text-decoration: none;
+      }
+
+
+    }
+
+  }
+}
+
+#donate,
+#nsdl-logo {
+  vertical-align: middle;
+
+}
+
+//reduce font size privacy polocy and remove symbol
+#privacy-policy {
+  font-size: 8pt;
+}

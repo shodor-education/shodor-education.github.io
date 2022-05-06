@@ -1,0 +1,9 @@
+main {
+  &>div {
+    display: flex;
+    justify-content: space-between;
+    .home-img-container{
+    display: inline-block;
+    }
+  }
+}
