@@ -1,9 +1,10 @@
-main {
-  &>div {
-    display: flex;
-    justify-content: space-between;
-    .home-img-container{
-    display: inline-block;
+#home-main {
+
+  & > div{
+    text-align: center;
+
+    .home-img-container {
+      display: inline-block;
     }
   }
 }

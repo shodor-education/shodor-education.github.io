@@ -43,14 +43,7 @@
         {% endfor %}
       </ul>
     </nav>
-    <main>
-      <div>
-        {% unless page.hide-h1 %}
-          <h1>{{ page.title }}</h1>
-        {% endunless %}
-        {{ content }}
-      </div>
-    </main>
+    {{ content }}
     <footer class="bg-img">
       <div id="btmTxtStrip">
         <span>

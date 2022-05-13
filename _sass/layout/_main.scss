@@ -1,5 +1,31 @@
-main {
+#page-main {
+  background-color: white;
+  border: $main-border;
+  border-bottom: 0;
+  border-top: 0;
   margin: 0 auto;
-  width: $page-width;
-  margin-bottom: 5px;
+  width: $page-width - 2;
+
+  & > div {
+    padding: 20px;
+
+    h1 {
+      border-bottom: 1px solid #d1d1d3;
+      font-size: 1.8em;
+      margin: 0;
+      margin-bottom: 15px;
+    }
+
+    .contentFeature {
+      background-image: linear-gradient(rgb(216, 231, 255), white);
+      background-size: 1px 80px;
+      background-repeat: repeat-x;
+      padding: 5px;
+
+      h3 {
+        margin-top: 0;
+      }
+    }
+  }
 }
+

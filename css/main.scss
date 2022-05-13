@@ -10,6 +10,9 @@ html{
 }
 
 $img-dir-url: {{ 'img' | relative_url }};
+
+$main-border: 1px solid #2d71ae;
+
 $page-width: 800px;
 
 @import 'layout/main';
