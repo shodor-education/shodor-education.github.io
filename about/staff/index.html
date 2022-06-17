@@ -1,0 +1,37 @@
+---
+layout: "page"
+title: "Staff"
+---
+
+<main id="staff-main">
+  <div>
+    <div>
+      <p>
+        Shodor's staff provide a <strong>broad range of experience in science and
+        technology </strong> fields. Staff members <strong>mentor interns and
+        apprentices</strong> as they develop curriculum materials and teach classes.
+        Staff also run workshops for <strong>students at Shodor </strong> and for
+        <strong> across the nation. </strong>
+      </p>
+    </div>
+    <div class="contentFeature">
+      <h3>Staff</h3>
+      <div class="subtitle">
+      </div>
+      {% for staff-member in site.data.staff %}
+        <section>
+          <h3>{{ staff-member.name }}</h3>
+          {% capture href %}/about/contact/{{ staff-member.name
+            | replace: " ", "_" }}{% endcapture %}
+          <a href="{{ href | relative_url }}">
+            <img src="{{ 'img/email-contact.png' | relative_url }}"
+              alt="EmailContact" width="20" height="15">
+          </a>
+          <p>
+          {{ staff-member.positions | join: "<br/>" }}
+          </p>
+          </section>
+      {% endfor %}
+    </div>
+  </div>
+</main>

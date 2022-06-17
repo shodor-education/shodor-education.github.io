@@ -9,11 +9,45 @@
   & > div {
     padding: 20px;
 
+    &:after{
+      clear: both;
+      content: "";
+      display: block;
+    }
+
     h1 {
       border-bottom: 1px solid #d1d1d3;
       font-size: 1.8em;
       margin: 0;
       margin-bottom: 15px;
+    }
+
+    .rightImg {
+      float: right;
+      margin: 2px 0px 8px 10px;
+      width: 252px;
+      font-size: 90%;
+      font-style: italic;
+      color: #525252;
+    }
+
+    .leftImg {
+      float: left;
+      margin: 2px 20px 0px 0px;
+      width: 252px;
+      font-size: 90%;
+      font-style: italic;
+      color: #525252;
+    }
+
+    .subtitle {
+      font-style: italic;
+      padding-bottom: 2px;
+      border-bottom: 1px solid #d1d1d3;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: rgb(209, 209, 211);
+      margin-bottom: 3px;
     }
 
     .contentFeature {
@@ -24,6 +58,20 @@
 
       h3 {
         margin-top: 0;
+        display: inline-block;
+      }
+
+      .subtitle{
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin-top: 0;
+        margin-left: 15px;
+      }
+
+      a {
+        display: inline-block;
       }
     }
   }

@@ -1,0 +1,26 @@
+- name: "Robert M Panoff"
+  positions:
+    - "Executive Director"
+    - "Computational Physics Mentor"
+- name: "Levi Diala"
+  positions:
+    - "Associate Director"
+    - "Workshop Program Coordinator"
+    - "Internship Program Coordinator"
+- name: "Ron Broadnax"
+  positions:
+    - "Braille through Remote Learning (BRL) Website Manager"
+    - "Engineering Mentor"
+- name: "Joel Coldren"
+  positions:
+    - "System Administrator"
+    - "Web Development Mentor"
+- name: "Ernest Edinboro"
+  positions:
+    - "Apprenticeship Program Coordinator"
+    - "Web Development Mentor"
+- name: "Aaron Weeden"
+  positions:
+    - "XSEDE EMPOWER Coordinator"
+    - "Apprenticeship Program Coordinator"
+    - "Parallel Computing Mentor"
