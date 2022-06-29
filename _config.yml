@@ -1,3 +1,12 @@
+collections:
+  intern-years:
+    output: true
+    permalink: "/about/interns/year:name/"
+defaults:
+  - scope:
+      type: "intern-years"
+    values:
+      layout: "intern-year"
 exclude:
   - "exclude"
 plugins:
