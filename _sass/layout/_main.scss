@@ -50,6 +50,13 @@
       margin-bottom: 3px;
     }
 
+    .beside {
+      display: inline-block;
+      vertical-align: top;
+      width: 400px;
+      height: 50px;
+    }
+
     .contentFeature {
       background-image: linear-gradient(rgb(216, 231, 255), white);
       background-size: 1px 80px;

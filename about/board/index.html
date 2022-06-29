@@ -1,0 +1,25 @@
+---
+layout: "page"
+title: "Board of Directors"
+---
+
+<main id="board-main">
+  <div>
+    {% for board-member in site.data.board %}
+    <section>
+        {% assign last-name = board-member.name | split: " " | last | downcase %}
+        {% capture src %}img/{{ last-name }}.jpg{% endcapture %}
+        <img src="{{ src | relative_url }}" />
+      <p class="beside">
+        <a href="{{ last-name }}">{{ board-member.name }}</a>
+        <br>
+        {{ board-member.department }}
+        <br>
+        {{ board-member.institution }}
+        <br>
+        {{ board-member.location }}
+      </p>
+    </section>
+    {% endfor %}
+  </div>
+</main>
